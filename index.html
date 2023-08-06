@@ -19,8 +19,12 @@
     <main class="main">
       <img src="./assets/hero.svg" alt="">
 
-      <form action="">
-        <fieldset class="form-container">
+      <form action="" class="form-container">
+        <span class="calc-container hidden">
+          <p></p>
+        </span>
+        
+        <fieldset class="form-content">
           <legend>Informações de Peso e Altura</legend>
           <div class="title">
             <h1>Calculadora IMC</h1>
@@ -29,26 +33,30 @@
 
           <div class="fields-group">
             <div class="input-group">
-              <label for="weight">Peso</label>
-              <input aria-label="Peso" type="number" id="weight" placeholder="Digite seu peso">
+              <input aria-label="Peso" required type="text" id="weight" placeholder="75kg">
             </div>
 
             <div class="input-group">
-              <label for="height">Altura</label>
-              <input aria-label="Altura" type="number" id="height" placeholder="Digite sua altura">
+              <input aria-label="Altura" required type="number" step="10" id="height" placeholder="180cm">
             </div>
           </div>
 
           <button class="calc-button">Calcular IMC</button>
-          <div class="result">
-            <p></p>
-          </div>
+          
         </fieldset>
+
+        <span class="result-container hidden">
+          <p class="result-content">
+            Seu IMC é de 
+            <strong class="result-calc">
+            </strong>
+             kg/m²
+          </p>
+          <span class="result-badge">Peso ideal</span>
+        </span>
       </form>
     </main>
   </div>
-
-
   <script src="script.js"></script>
 </body>
 
