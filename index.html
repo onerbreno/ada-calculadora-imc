@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <main class="main">
+      <img src="./assets/hero.svg" alt="">
+
+      <form action="">
+        <fieldset class="form-container">
+          <legend>Informações de Peso e Altura</legend>
+          <div class="title">
+            <h1>Calculadora IMC</h1>
+            <p>Insira seu peso e altura para calcular seu IMC</p>
+          </div>
+
+          <div class="fields-group">
+            <div class="input-group">
+              <label for="weight">Peso</label>
+              <input aria-label="Peso" type="number" id="weight" placeholder="Digite seu peso">
+            </div>
+
+            <div class="input-group">
+              <label for="height">Altura</label>
+              <input aria-label="Altura" type="number" id="height" placeholder="Digite sua altura">
+            </div>
+          </div>
+
+          <button class="calc-button">Calcular IMC</button>
+          <div class="result">
+            <p></p>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

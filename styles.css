@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray100: #808080;
+  --gray300: #3C3C42;
+  --gray700: #202024;
+  --gray900: #141414;
+  --green500: #00875F;
+  --green300: #00B37E;
+
+  --white: #F2F2F2;
+}
+
+
+:focus {
+  outline: 2px solid #00875F;
+}
+
+body {
+  background: #141414;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+}
+
+body,
+input,
+button,
+textarea {
+  font-size: 1rem;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.main {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1.5rem;
+  background: var(--gray700);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: none;
+}
+
+.title {
+  display: grid;
+  gap: 0.5rem
+}
+
+.title p {
+  color: var(--gray100);
+}
+
+.fields-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.input-group label {
+  display: none;
+}
+
+input,
+button {
+  border-radius: 6px;
+  height: 56px;
+  width: 100%;
+  border: 0;
+}
+
+input {
+  padding: 1rem;
+  background: var(--gray900);
+}
+
+input::placeholder {
+  color: var(--gray100);
+}
+
+.calc-button {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 1.5rem */
+
+  padding: 1rem;
+
+  color: white;
+  background: var(--green500);
+}
+
+.calc-button:hover {
+  transition: all 0.3s;
+  background: var(--green300);
+}
+
+
+
+.result {
+  display: flex;
+  font-family: 'Fira Code', monospace;
+  padding: 1rem;
+
+  height: 80px;
+  align-items: center;
+  margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--gray300);
+}
