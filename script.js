@@ -1,3 +1,5 @@
+import { formatFloat } from "./utils/formatFloat.js";
+
 const form = document.querySelector('.form-container');
 const calcContainer = document.querySelector('.calc-container');
 const calcText = document.querySelector('.calc-container p');
@@ -30,7 +32,6 @@ function calculateIMC(e) {
   const weight = parseFloat(weightInput.value);
   const height = parseFloat(heightInput.value) / 100;
 
-
   if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
     showError('Insira valores válidos de peso e altura.');
     return;
@@ -55,7 +56,10 @@ function updateCalcText(weight, height, imcFormatted) {
   String(weight).replace('.', ',')
   calcContainer.classList.remove('hidden');
 
-  calcText.textContent = `${weight}kg / (${height}m * ${height}m) = ${imcFormatted}`;
+  const heightFormatted = formatFloat(height)
+
+
+  calcText.textContent = `${weight}kg / (${heightFormatted}m * ${heightFormatted}m) = ${imcFormatted}`;
 }
 
 function updateResultElements(statusClass, message, imcFormatted) {

@@ -1,0 +1,1 @@
+export const formatFloat = value => new Intl.NumberFormat().format(value)
